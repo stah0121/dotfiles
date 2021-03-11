@@ -167,6 +167,12 @@ if [ $GIT_REPO ]; then
 			fi
 		else
 			$ECHO "rc spec [${GIT_DEFAULT_RC}] not found. No defaults to use."
+			if [[ ${GIT_ROOT} =~ ${USER} ]]; then
+				$ECHO "creating rc directory at ${GIT_PATH}..."
+				if [ ! -d ${GIT_RC_PATH} -a -w ${GIT_ROOT} ]; then
+					mkdir ${GIT_RC_PATH}
+				fi
+			fi
 		fi
 	fi
 

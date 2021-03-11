@@ -113,7 +113,7 @@ colorscheme xterm
 " setlocal textwidth=79
 " setlocal fo-=ro fo+=cql
 
-let $TMPDIR=$HOME . '/tmp'
+let $TMPDIR=$HOME . '/xyztmp'
 
 set nocompatible			" ---- Use Vim defaults (much better!)
 set bs=indent,eol,start		" ---- allow backspacing over everything in insert mode
